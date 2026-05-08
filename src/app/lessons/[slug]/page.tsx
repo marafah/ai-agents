@@ -65,6 +65,10 @@ const categoryColors: Record<string, string> = {
   'voice-ai': '#15803d',
 };
 
+export function generateStaticParams() {
+  return lessons.map((lesson) => ({ slug: lesson.slug }));
+}
+
 export default async function LessonDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
