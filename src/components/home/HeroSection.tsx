@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Play, ExternalLink, Bot, Cpu, Zap, Network, Search, FileText, CheckCircle, Send, Loader2, User } from 'lucide-react';
+import { ArrowRight, Play, ExternalLink, Bot, Cpu, Zap, Network, Search, FileText, CheckCircle, Send, Loader2 } from 'lucide-react';
 import { useLocale } from '@/hooks/useLocale';
 import { t } from '@/lib/i18n';
 import authorImg from '../../../public/author.png';
@@ -165,12 +165,14 @@ export default function HeroSection() {
               {t('hero.description', locale)}
             </p>
 
-            <Link
-              href="/about"
+            <a
+              href="https://marafah.github.io/Portfolio/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 mb-6 group"
             >
               <div className="relative w-8 h-8 rounded-full overflow-hidden"
-                style={{ boxShadow: '0 0 0 2px var(--bg-primary), 0 0 0 4px var(--color-primary)' }}
+                style={{ boxShadow: '0 0 0 2px var(--bg-primary), 0 0 0 3px #06b6d4' }}
               >
                 <Image
                   src={authorImg}
@@ -180,10 +182,11 @@ export default function HeroSection() {
                   sizes="32px"
                 />
               </div>
-              <span className="text-sm transition-colors group-hover:text-[var(--color-primary)]" style={{ color: 'var(--text-secondary)' }}>
-                {locale === 'ar' ? 'بواسطة د. محمد عرفة' : 'by Dr. Mohammad Arafah'}
+              <span className="text-sm font-medium transition-colors group-hover:text-[#06b6d4]" style={{ color: 'var(--text-secondary)' }}>
+                {locale === 'ar' ? 'د. محمد عرفة' : 'Dr. Mohammad Arafah'}
               </span>
-            </Link>
+              <ExternalLink className="h-3 w-3 transition-colors group-hover:text-[#06b6d4]" style={{ color: 'var(--text-tertiary)' }} />
+            </a>
 
             <div className="flex flex-wrap gap-3">
               <Link
@@ -210,16 +213,6 @@ export default function HeroSection() {
               >
                 <ExternalLink className="h-4 w-4" />
                 {t('hero.cta.github', locale)}
-              </Link>
-              <Link
-                href="https://marafah.github.io/Portfolio/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 rounded-xl font-semibold flex items-center gap-2 border transition-colors hover:bg-[var(--bg-tertiary)]"
-                style={{ borderColor: 'var(--border-primary)', color: 'var(--text-primary)' }}
-              >
-                <User className="h-4 w-4" />
-                {locale === 'ar' ? 'الملف الشخصي' : 'Portfolio'}
               </Link>
             </div>
           </motion.div>
