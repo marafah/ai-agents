@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI Agents Academy  - Master AI Agents from Zero to Production",
+  title: "AI Agents - Master AI Agents from Zero to Production",
   description:
     "The most comprehensive open-source learning platform for AI Agents. Learn theory, build projects, and master industry-grade implementations with interactive lessons, simulations, and hands-on projects.",
   keywords: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Dr. Mohammad Arafah", url: "https://marafah.github.io/Portfolio/" }],
   openGraph: {
-    title: "AI Agents Academy",
+    title: "AI Agents",
     description: "Master AI Agents from Zero to Production",
     type: "website",
     locale: "en_US",

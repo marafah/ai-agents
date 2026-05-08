@@ -101,7 +101,7 @@ export default function Footer() {
           style={{ borderColor: 'var(--border-primary)' }}
         >
           <p className="text-sm" style={{ color: 'var(--text-tertiary)' }}>
-            &copy; {year} AI Agents Academy. {t('footer.rights', locale)}
+            &copy; {year} AI Agents. {t('footer.rights', locale)}
           </p>
           <div className="flex items-center gap-4">
             <span className="text-sm flex items-center gap-1" style={{ color: 'var(--text-tertiary)' }}>

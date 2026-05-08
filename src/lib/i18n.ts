@@ -15,7 +15,7 @@ export function getDirection(locale: Locale): 'ltr' | 'rtl' {
 
 const translations: Record<Locale, Record<string, string>> = {
   en: {
-    'site.title': 'AI Agents Academy',
+    'site.title': 'AI Agents',
     'site.description': 'Master AI Agents from Zero to Production',
     'nav.home': 'Home',
     'nav.paths': 'Learning Paths',
@@ -61,7 +61,7 @@ const translations: Record<Locale, Record<string, string>> = {
     'exams.subtitle': 'Assess your understanding with quizzes and exams',
     'projects.title': 'Hands-On Projects',
     'projects.subtitle': 'Build real AI Agent systems from scratch',
-    'about.title': 'About AI Agents Academy',
+    'about.title': 'About AI Agents',
     'about.subtitle': 'An open-source educational platform for learning AI Agents',
     'common.minutes': 'min',
     'common.hours': 'hours',
@@ -100,7 +100,7 @@ const translations: Record<Locale, Record<string, string>> = {
     'footer.rights': 'All rights reserved.',
   },
   ar: {
-    'site.title': 'أكاديمية وكلاء الذكاء الاصطناعي',
+    'site.title': 'وكلاء الذكاء الاصطناعي',
     'site.description': 'أتقن وكلاء الذكاء الاصطناعي من الصفر إلى الإنتاج',
     'nav.home': 'الرئيسية',
     'nav.paths': 'مسارات التعلم',
@@ -146,7 +146,7 @@ const translations: Record<Locale, Record<string, string>> = {
     'exams.subtitle': 'قيّم فهمك من خلال الاختبارات والامتحانات',
     'projects.title': 'مشاريع عملية',
     'projects.subtitle': 'ابنِ أنظمة وكلاء ذكاء اصطناعي حقيقية من الصفر',
-    'about.title': 'حول أكاديمية وكلاء الذكاء الاصطناعي',
+    'about.title': 'حول وكلاء الذكاء الاصطناعي',
     'about.subtitle': 'منصة تعليمية مفتوحة المصدر لتعلم وكلاء الذكاء الاصطناعي',
     'common.minutes': 'دقيقة',
     'common.hours': 'ساعات',

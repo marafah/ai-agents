@@ -177,7 +177,7 @@ export default function AboutPage() {
               <p className="text-base leading-relaxed mb-4" style={{ color: 'var(--text-secondary)' }}>
                 {locale === 'ar'
                   ? 'أكاديمية وكلاء الذكاء الاصطناعي هي منصة تعليمية مفتوحة المصدر بالكامل مكرسة لإزالة الغموض عن وكلاء الذكاء الاصطناعي. نؤمن بأن المعرفة حول بناء أنظمة ذكاء اصطناعي آمنة ومسؤولة يجب أن تكون متاحة للجميع  - بغض النظر عن خلفيتهم أو لغتهم أو موقعهم الجغرافي.'
-                  : 'AI Agents Academy is a fully open-source educational platform dedicated to demystifying AI Agents. We believe that knowledge about building safe, responsible AI systems should be accessible to everyone  - regardless of background, language, or location.'}
+                  : 'AI Agents is a fully open-source educational platform dedicated to demystifying AI Agents. We believe that knowledge about building safe, responsible AI systems should be accessible to everyone - regardless of background, language, or location.'}
               </p>
               <p className="text-base leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                 {locale === 'ar'

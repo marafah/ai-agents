@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Play, ExternalLink, Bot, Cpu, Zap, Network, Search, FileText, CheckCircle, Send, Loader2 } from 'lucide-react';
+import { ArrowRight, Play, ExternalLink, Bot, Cpu, Zap, Network, Search, FileText, CheckCircle, Send, Loader2, User } from 'lucide-react';
 import { useLocale } from '@/hooks/useLocale';
 import { t } from '@/lib/i18n';
 import authorImg from '../../../public/author.png';
@@ -210,6 +210,16 @@ export default function HeroSection() {
               >
                 <ExternalLink className="h-4 w-4" />
                 {t('hero.cta.github', locale)}
+              </Link>
+              <Link
+                href="https://marafah.github.io/Portfolio/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 rounded-xl font-semibold flex items-center gap-2 border transition-colors hover:bg-[var(--bg-tertiary)]"
+                style={{ borderColor: 'var(--border-primary)', color: 'var(--text-primary)' }}
+              >
+                <User className="h-4 w-4" />
+                {locale === 'ar' ? 'الملف الشخصي' : 'Portfolio'}
               </Link>
             </div>
           </motion.div>
