@@ -202,7 +202,7 @@ export default function HeroSection() {
                 {t('hero.cta.playground', locale)}
               </Link>
               <Link
-                href="https://github.com/marafah/ai-agents-academy"
+                href="https://github.com/marafah/ai-agents"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 rounded-xl font-semibold flex items-center gap-2 border transition-colors hover:bg-[var(--bg-tertiary)]"

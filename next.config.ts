@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/ai-agents-academy',
+  basePath: '/ai-agents',
 };
 
 export default nextConfig;
