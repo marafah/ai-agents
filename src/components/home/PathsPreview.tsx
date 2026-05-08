@@ -2,18 +2,42 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, Layers, Brain, Building2, FlaskConical } from 'lucide-react';
+import {
+  ArrowRight, Sparkles, Layers, Code, GitBranch, Database,
+  Puzzle, Users, Cloud, Server, Briefcase, Brain, FlaskConical,
+  Building2, MessageSquare, Cpu, Network, GitMerge, Shield,
+  Rocket, UsersRound, Flame,
+} from 'lucide-react';
 import { useLocale } from '@/hooks/useLocale';
 import { t } from '@/lib/i18n';
 import { learningPaths } from '@/data/paths';
 import DifficultyBadge from '@/components/ui/DifficultyBadge';
 
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  Sparkles,
-  Layers,
-  Brain,
-  Building2,
-  FlaskConical,
+const iconMap: Record<string, React.ComponentType<{ className?: string; style?: React.CSSProperties }>> = {
+  Sparkles, Layers, Code, GitBranch, Database,
+  Puzzle, Users, Cloud, Server, Briefcase,
+  Brain, FlaskConical, Building2, MessageSquare,
+  Cpu, Network, GitMerge, Shield, Rocket,
+  UsersRound, Flame,
+};
+
+const colorMap: Record<string, string> = {
+  emerald: '#10b981',
+  blue: '#3b82f6',
+  cyan: '#06b6d4',
+  violet: '#8b5cf6',
+  amber: '#f59e0b',
+  rose: '#f43f5e',
+  teal: '#14b8a6',
+  sky: '#0ea5e9',
+  orange: '#f97316',
+  indigo: '#6366f1',
+  lime: '#84cc16',
+  fuchsia: '#d946ef',
+  pink: '#ec4899',
+  red: '#ef4444',
+  slate: '#64748b',
+  purple: '#a855f7',
 };
 
 export default function PathsPreview() {
@@ -34,6 +58,7 @@ export default function PathsPreview() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {learningPaths.slice(0, 3).map((path, index) => {
             const Icon = iconMap[path.icon] || Sparkles;
+            const color = colorMap[path.color] || '#6366f1';
             return (
               <motion.div
                 key={path.id}
@@ -53,9 +78,9 @@ export default function PathsPreview() {
                   <div className="flex items-start justify-between mb-4">
                     <div
                       className="w-12 h-12 rounded-xl flex items-center justify-center"
-                      style={{ background: `var(--color-primary)`, opacity: 0.9 }}
+                      style={{ background: `${color}18` }}
                     >
-                      <Icon className="h-6 w-6 text-white" />
+                      <Icon className="h-6 w-6" style={{ color }} />
                     </div>
                     <DifficultyBadge difficulty={path.difficulty} />
                   </div>

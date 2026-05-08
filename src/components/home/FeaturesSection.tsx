@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 import {
   BookOpen,
   Code2,
-  FlaskConical,
   Gamepad2,
-  GraduationCap,
-  Languages,
-  Layers,
+  FlaskConical,
   Trophy,
+  Rocket,
+  Globe,
+  Building2,
 } from 'lucide-react';
 import { useLocale } from '@/hooks/useLocale';
 import { t } from '@/lib/i18n';
@@ -17,6 +17,8 @@ import { t } from '@/lib/i18n';
 const features = [
   {
     icon: BookOpen,
+    color: '#6366f1',
+    bg: 'rgba(99, 102, 241, 0.12)',
     title: { en: 'Structured Curriculum', ar: 'منهج منظم' },
     description: {
       en: 'From AI basics to production-grade agents. Five learning paths tailored to your level.',
@@ -25,6 +27,8 @@ const features = [
   },
   {
     icon: Code2,
+    color: '#06b6d4',
+    bg: 'rgba(6, 182, 212, 0.12)',
     title: { en: 'Code Examples', ar: 'أمثلة برمجية' },
     description: {
       en: 'Every concept comes with tested, runnable code in Python and TypeScript.',
@@ -33,6 +37,8 @@ const features = [
   },
   {
     icon: Gamepad2,
+    color: '#f59e0b',
+    bg: 'rgba(245, 158, 11, 0.12)',
     title: { en: 'Interactive Playground', ar: 'ساحة تجارب تفاعلية' },
     description: {
       en: 'Experiment with AI Agent behavior. See thinking, planning, and tool use in real-time.',
@@ -41,6 +47,8 @@ const features = [
   },
   {
     icon: FlaskConical,
+    color: '#8b5cf6',
+    bg: 'rgba(139, 92, 246, 0.12)',
     title: { en: 'Visual Simulations', ar: 'محاكاة بصرية' },
     description: {
       en: 'Watch RAG pipelines, ReAct loops, and multi-agent systems come alive with animations.',
@@ -49,6 +57,8 @@ const features = [
   },
   {
     icon: Trophy,
+    color: '#ef4444',
+    bg: 'rgba(239, 68, 68, 0.12)',
     title: { en: 'Quizzes & Exams', ar: 'اختبارات وامتحانات' },
     description: {
       en: 'Test your knowledge with MCQs, scenario questions, and practical coding challenges.',
@@ -56,7 +66,9 @@ const features = [
     },
   },
   {
-    icon: Layers,
+    icon: Rocket,
+    color: '#10b981',
+    bg: 'rgba(16, 185, 129, 0.12)',
     title: { en: 'Hands-On Projects', ar: 'مشاريع عملية' },
     description: {
       en: 'Build real agents: RAG systems, multi-agent teams, customer support bots, and more.',
@@ -64,7 +76,9 @@ const features = [
     },
   },
   {
-    icon: Languages,
+    icon: Globe,
+    color: '#0ea5e9',
+    bg: 'rgba(14, 165, 233, 0.12)',
     title: { en: 'Multilingual', ar: 'متعدد اللغات' },
     description: {
       en: 'Full English and Arabic support with proper RTL layout. Learn in your language.',
@@ -72,7 +86,9 @@ const features = [
     },
   },
   {
-    icon: GraduationCap,
+    icon: Building2,
+    color: '#ec4899',
+    bg: 'rgba(236, 72, 153, 0.12)',
     title: { en: 'Industry Scenarios', ar: 'سيناريوهات صناعية' },
     description: {
       en: 'Apply agents to cybersecurity, healthcare, finance, education, and software engineering.',
@@ -112,13 +128,16 @@ export default function FeaturesSection() {
                   borderColor: 'var(--border-primary)',
                 }}
               >
-                <div className="gradient-bg w-10 h-10 rounded-lg flex items-center justify-center mb-4">
-                  <Icon className="h-5 w-5 text-white" />
+                <div
+                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
+                  style={{ background: feature.bg }}
+                >
+                  <Icon className="h-6 w-6" style={{ color: feature.color }} />
                 </div>
                 <h3 className="font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>
                   {feature.title[locale]}
                 </h3>
-                <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                   {feature.description[locale]}
                 </p>
               </motion.div>

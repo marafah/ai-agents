@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import {
   ArrowRight, Sparkles, Layers, Code, GitBranch, Database,
   Puzzle, Users, Cloud, Server, Briefcase, Clock, BookOpen,
+  Brain, FlaskConical, Building2, MessageSquare, Cpu, Network,
+  GitMerge, Shield, Rocket, UsersRound, Flame,
 } from 'lucide-react';
 import { useLocale } from '@/hooks/useLocale';
 import { t } from '@/lib/i18n';
@@ -16,6 +18,9 @@ import { useProgress } from '@/hooks/useProgress';
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Sparkles, Layers, Code, GitBranch, Database,
   Puzzle, Users, Cloud, Server, Briefcase,
+  Brain, FlaskConical, Building2, MessageSquare,
+  Cpu, Network, GitMerge, Shield, Rocket,
+  UsersRound, Flame,
 };
 
 const colorMap: Record<string, string> = {
@@ -29,6 +34,12 @@ const colorMap: Record<string, string> = {
   sky: '#0ea5e9',
   orange: '#f97316',
   indigo: '#6366f1',
+  lime: '#84cc16',
+  fuchsia: '#d946ef',
+  pink: '#ec4899',
+  red: '#ef4444',
+  slate: '#64748b',
+  purple: '#a855f7',
 };
 
 export default function PathsPage() {
