@@ -25,6 +25,7 @@ import {
 } from 'lucide-react';
 import { useLocale } from '@/hooks/useLocale';
 import { t } from '@/lib/i18n';
+import authorImg from '../../../public/author.png';
 
 const fadeUp = {
   initial: { opacity: 0, y: 20 },
@@ -227,7 +228,7 @@ export default function AboutPage() {
                 style={{ boxShadow: '0 0 0 3px var(--bg-tertiary), 0 0 0 6px #06b6d4' }}
               >
                 <Image
-                  src="/author.png"
+                  src={authorImg}
                   alt="Dr. Mohammad Arafah"
                   fill
                   className="object-cover"

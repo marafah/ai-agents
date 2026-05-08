@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Play, ExternalLink, Bot, Cpu, Zap, Network, Search, FileText, CheckCircle, Send, Loader2 } from 'lucide-react';
 import { useLocale } from '@/hooks/useLocale';
 import { t } from '@/lib/i18n';
+import authorImg from '../../../public/author.png';
 
 interface AgentStepData {
   icon: React.ReactNode;
@@ -172,7 +173,7 @@ export default function HeroSection() {
                 style={{ boxShadow: '0 0 0 2px var(--bg-primary), 0 0 0 4px var(--color-primary)' }}
               >
                 <Image
-                  src="/author.png"
+                  src={authorImg}
                   alt="Dr. Mohammad Arafah"
                   fill
                   className="object-cover"
@@ -201,7 +202,7 @@ export default function HeroSection() {
                 {t('hero.cta.playground', locale)}
               </Link>
               <Link
-                href="https://github.com"
+                href="https://github.com/marafah/ai-agents-academy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 rounded-xl font-semibold flex items-center gap-2 border transition-colors hover:bg-[var(--bg-tertiary)]"
